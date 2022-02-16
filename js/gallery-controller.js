@@ -1,5 +1,11 @@
 'use strict';
 
+var gImgs = [];
+
+function initGallery(){
+    renderGallery()
+}
+
 function renderGallery() {
     var renderedImages = gImgs.map((img) => {
         return `<img src=${img.url} onclick="onImgSelect(${img.id})">`;
@@ -8,9 +14,6 @@ function renderGallery() {
     elGallery.innerHTML = renderedImages.join('');
 }
 
-function getImages() {
-    return gImgs;
-}
 
 
 

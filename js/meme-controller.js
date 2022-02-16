@@ -6,7 +6,7 @@ var gCurrImgUrl;
 var gCurrMemeLines;
 var gTextPos;
 
-function init() {
+function initEditor() {
     gElCanvas = document.getElementById("my-canvas");
     gCtx = gElCanvas.getContext("2d");
     createImages();

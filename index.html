@@ -9,35 +9,47 @@
     <title>Meme-Generator</title>
 </head>
 
-<body onload="init()">
-    <h3 class="text text-top">Text Goes Here ↓</h3>
+<body onload="initGallery()">
     <div class="main-layout">
-        <section class="gallery">
-        </section>
-        <section class="editor-section">
-            <div class="canvas-container">
-                <canvas id="my-canvas" height="500" width="500"></canvas>
+        <header class="main-header">
+            <div class="logo">Meme-Generator</div>
+            <nav class="main-nav-container">
+                <div class="main-nav">
+                    <button class="nav-btn btn-gallery">Gallery</button>
+                    <button class="nav-btn btn-about">About</button>
+                </div>
+                <!-- <button class="btn-menu" onclick="toggleMenu()">☰</button> -->
+            </nav>
+        </header>
+        <h3 class="text text-top">Text Goes Here ↓</h3>
+        <div class="main-container">
+            <div class="gallery">
             </div>
-            <div class="editor">
-                <div class="inside-color"> text color:
-                    <input type="color" name="txt-color" value="#FFFFFF" oninput="onChangeTxtColor()" />
+            <div class="editor-container">
+                <div class="canvas-container">
+                    <canvas id="my-canvas" height="500" width="500"></canvas>
                 </div>
-                <div class="change-text-color">
-                    <button onclick="onChangeTxt()">Text</button>
-                    <input class="meme-text-input">
-                </div>
-                <div class="change-text-size">
-                    <h4>Increase/Decrease Text Size</h3>
-                        <input value="1" min="15" max="100" type="range" name="txt-size" id="pen-thickness"
-                            oninput="onChangeTxtSize()" />
-                </div>
-                <div class="switch-line">
-                    <button onclick="onSwitchLine()">Switch Line</button>
+                <div class="editor">
+                    <div class="inside-color"> text color:
+                        <input type="color" name="txt-color" value="#FFFFFF" oninput="onChangeTxtColor()" />
+                    </div>
+                    <div class="change-text-color">
+                        <button onclick="onChangeTxt()">Text</button>
+                        <input class="meme-text-input">
+                    </div>
+                    <div class="change-text-size">
+                        <h4>Increase/Decrease Text Size</h3>
+                            <input value="1" min="15" max="100" type="range" name="txt-size" id="pen-thickness"
+                                oninput="onChangeTxtSize()" />
+                    </div>
+                    <div class="switch-line">
+                        <button onclick="onSwitchLine()">Switch Line</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <h3 class="text text-bottom">Text Goes Here ↑</h3>
     </div>
-    <h3 class="text text-bottom">Text Goes Here ↑</h3>
 </body>
 <script src="js/gallery-controller.js"></script>
 <script src="js/gallery-service.js"></script>

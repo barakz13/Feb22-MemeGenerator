@@ -2,13 +2,79 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgba(156, 156, 204, 0.842);
-    margin: 0 auto;
+@font-face {
+    font-family: PoppinsMed;
+    src: url(/Fonts/Poppins/Poppins-Medium.ttf);
 }
 
-.main-layout{
-    margin-top: 150px;
+@font-face {
+    font-family: PoppinsLight;
+    src: url(/Fonts/Poppins/Poppins-Light.ttf);
+}
+
+body {
+    background-image: linear-gradient(65deg, #F64F8B, #F8825B);
+    max-height: 1280px;
+    max-width: 680px;
+}
+
+.main-layout {
+    margin-left: -300px;
+    background-color: bisque;
+    height: 655px;
+    width: 1257px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-header {
+    margin-top: 15px;
+    background-image: linear-gradient(265deg, #33BE6D, #0C98B9);
+    width: 1257px;
+    height: 73px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: PoppinsMed;
+    width: 200px;
+    height: 65px;
+    margin-left: 80px;
+    font-size: 20px;
+    padding-top: 17px;
+    color: white;
+}
+
+.main-nav-container {
+    margin-right: 246px;
+}
+
+.nav-btn:hover {
+    color: #21AC91;
+    background-color: white;
+}
+
+.nav-btn {
+    font-family: PoppinsMed;
+    font-size: larger;
+    width: 116px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    background: none;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-about {
+    margin-left: 23px;
 }
 
 .text {
@@ -24,18 +90,24 @@ body {
 
 .text-bottom {
     position: absolute;
-    bottom:  230px;
+    bottom: 230px;
     left: 450px;
     display: none;
 }
 
+.main-container {
+    display: flex;
+    width: 1243px;
+    height: 566px;
+    margin-top: 15px;
+}
 
-.gallery{
+.gallery {
     background-color: aqua;
     order: 1;
     width: 50%;
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(150px, 1fr) );
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-auto-rows: 150px;
 }
 
@@ -65,8 +137,4 @@ img {
     margin: auto;
     display: block;
     border: 3px solid black;
-}
-
-.main-layout {
-    display: flex;
 }
