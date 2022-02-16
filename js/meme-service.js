@@ -7,9 +7,15 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I sometimes eat Falafel',
-            size: 25,
-            align: 'right',
+            txt: '',
+            size: 35,
+            align: 'center',
+            color: 'white'
+        },
+        {
+            txt: '',
+            size: 35,
+            align: 'center',
             color: 'white'
         }
     ]
@@ -36,5 +42,5 @@ function createImg(id, url, keywords) {
 function setLineTxt() {
     var elTxt = document.querySelector('.meme-text-input');
     var newTxt = elTxt.value;
-    gMeme.lines[0].txt = newTxt;
+    gCurrMemeLines.txt = newTxt;
 }
