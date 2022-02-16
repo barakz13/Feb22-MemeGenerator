@@ -4,4 +4,18 @@
 
 body {
     background-color: rgba(156, 156, 204, 0.842);
+    margin: 0 auto;
+}
+
+.canvas-container {
+    background-color: blueviolet;
+    margin-top: 50px;
+}
+
+#my-canvas {
+    background-color: white;
+    padding: 0;
+    margin: auto;
+    display: block;
+    border: 3px solid black;
 }
