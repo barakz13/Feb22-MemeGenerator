@@ -19,13 +19,13 @@ body {
 .text-top {
     position: absolute;
     top: 100px;
-    left: 350px;
+    left: 450px;
 }
 
 .text-bottom {
     position: absolute;
     bottom:  230px;
-    left: 350px;
+    left: 450px;
     display: none;
 }
 
