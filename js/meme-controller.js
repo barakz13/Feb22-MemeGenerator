@@ -10,15 +10,7 @@ function init() {
     createImages();
     gCurrImgUrl = gImgs[0].url;
     renderMeme();
-}
-
-function onClearCanvas() {
-    gCtx.beginPath();
-    gCtx.rect(0, 0, gElCanvas.width, gElCanvas.height);
-    gCtx.fillStyle = "white";
-    gCtx.fillRect(0, 0, gElCanvas.width, gElCanvas.height);
-    gCtx.strokeStyle = "white";
-    gCtx.stroke();
+    renderGallery();
 }
 
 function getImages() {
@@ -62,7 +54,7 @@ function renderMeme() {
     }
 }
 
-function changeTxt() {
+function onChangeTxt() {
     setLineTxt();
     renderMeme();
     var elTxt = document.querySelector('.meme-text-input');

@@ -7,9 +7,25 @@ body {
     margin: 0 auto;
 }
 
-.canvas-container {
+.gallery{
+    background-color: aqua;
+    order: 1;
+    width: 50%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(150px, 1fr) );
+    grid-auto-rows: 150px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.editor {
     background-color: blueviolet;
     margin-top: 50px;
+    width: 50%;
 }
 
 #my-canvas {
@@ -18,4 +34,8 @@ body {
     margin: auto;
     display: block;
     border: 3px solid black;
+}
+
+.main-layout {
+    display: flex;
 }
