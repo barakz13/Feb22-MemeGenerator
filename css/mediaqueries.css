@@ -1,8 +1,27 @@
-@media (min-width:992px) {
+@media (min-width:1280px) {
+    .main-layout {
+        width: 1257px;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 655px;
+    }
+
+    .main-header {
+        border-radius: 50px;
+        height: 73px;
+    }
+
     .logo {
-        margin-left: 120px;
+        margin-left: 80px;
         font-size: 20px;
         padding-top: 17px;
+    }
+
+    .main-nav {
+        width: 468px;
     }
 
     .nav-btn {
@@ -10,19 +29,24 @@
         width: 116px;
     }
 
-    .main-nav {
-        margin-right: 170px;
+    .btn-about {
+        margin-right: 184px;
+        margin-left: 21px;
     }
 
     .main-container {
         height: 746px;
+        margin-left: 7px;
+        margin-right: 7px;
     }
 
     .image-container {
         height: 566px;
+        width: 1171px;
     }
 
     .gallery {
+        width: 1171px;
         height: 437px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(199.5px, 1fr));
@@ -37,10 +61,31 @@
     }
 }
 
-@media (max-width:991px) {
+@media (max-width:1279px) {
+
+    .main-layout {
+        width: 90%;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 835px;
+    }
+
+    .main-header {
+        border-radius: 50px;
+        height: 73px;
+    }
 
     .main-container {
         height: 746px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .btn-about {
+        margin-left: 21px;
     }
 
     img {
@@ -73,6 +118,7 @@
 
     .main-nav {
         margin-right: 30px;
+        width: 172px;
     }
 
     .nav-btn {
@@ -80,23 +126,33 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+    .main-header {
+        border-radius: 0px;
+        height: 130px;
+    }
+
     .main-layout {
+        margin-top: -8px;
+        position: static;
         transform: none;
-        height: 835px;
+        height: 1280px;
+        width: 100%;
     }
 
     .main-container {
-        height: 754px;
+        height: 1164px;
+        margin-left: 18px;
+        margin-right: 18px;
     }
 
     .image-container {
-        height: 739px;
+        height: 1164px;
     }
 
     .gallery {
         display: grid;
-        height: 608px;
+        height: 1032px;
         grid-template-columns: repeat(auto-fill, minmax(200.5px, 1fr));
         grid-auto-rows: 215.5px;
         margin-left: 34px;
