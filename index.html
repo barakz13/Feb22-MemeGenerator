@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Meme-Generator</title>
 </head>
 
@@ -29,15 +32,31 @@
             </div>
             <div class="editor-container">
                 <div class="canvas-container">
-                    <canvas id="my-canvas" height="546" width="476"></canvas>
+                    <canvas id="my-canvas" height="495" width="495"></canvas>
                 </div>
                 <div class="editor">
                     <div class="inside-color"> text color:
                         <input type="color" name="txt-color" value="#FFFFFF" oninput="onChangeTxtColor()" />
                     </div>
+                    <div class="text-pos-btns">
+                        <button class="arrow-up" onclick="onRaiseText()">↑</button>
+                        <button class="arrow-down" onclick="onLowerText()">↓</button>
+                    </div>
                     <div class="change-text-color">
                         <button onclick="onChangeTxt()">Text</button>
                         <input class="meme-text-input">
+                    </div>
+                    <div class="font-family-btn">
+                        <select onchange="onSetFont(this.value)">
+                            <option value="Impact">Impact</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Comic-sans">Comic Sans</option>
+                        </select>
+                    </div>
+                    <div class="text-align-btns">
+                        <button value="left" class="fa fa-align-left" onclick="onTextAlign(this.value)"></button>
+                        <button value="center" class="fa fa-align-center" onclick="onTextAlign(this.value)"></button>
+                        <button value="right" class="fa fa-align-right" onclick="onTextAlign(this.value)"></button>
                     </div>
                     <div class="change-text-size">
                         <h4>Increase/Decrease Text Size</h3>
@@ -46,6 +65,13 @@
                     </div>
                     <div class="switch-line">
                         <button onclick="onSwitchLine()">Switch Line</button>
+                    </div>
+                    <div class="download">
+                        <a href="#" onclick="downloadMeme(this)">Download</a>
+                    </div>
+                    <div class="lines-number">
+                        <button class="line-add" onclick="onAddLine()">+</button>
+                        <button class="line-remove" onclick="onRemoveLine()">-</button>
                     </div>
                 </div>
             </div>

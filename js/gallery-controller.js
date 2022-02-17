@@ -9,8 +9,6 @@ function initGallery() {
     var elMainContainer = document.querySelector('.main-container');
     elMainContainer.style.height = '566px';
     elMainContainer.style.marginTop = '16px';
-    var elMainLayout = document.querySelector('.main-layout');
-    elMainLayout.style.height = '655px';
     createImages()
     renderGallery()
 }

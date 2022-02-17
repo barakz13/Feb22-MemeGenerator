@@ -9,13 +9,22 @@ var gMeme = {
             txt: '',
             size: 35,
             align: 'center',
-            color: 'white'
+            color: 'white',
+            font: 'Impact'
         },
         {
             txt: '',
             size: 35,
             align: 'center',
-            color: 'white'
+            color: 'white',
+            font: 'Impact'
+        },
+        {
+            txt: '',
+            size: 35,
+            align: 'center',
+            color: 'white',
+            font: 'Impact'
         }
     ]
 };
@@ -25,3 +34,14 @@ function setLineTxt() {
     var newTxt = elTxt.value;
     gCurrMemeLines.txt = newTxt;
 }
+
+// function createLine() {
+//     var newLine = {
+//         txt: '',
+//         size: 35,
+//         align: 'center',
+//         color: 'white',
+//         font: 'Impact'
+//     }
+//     return newLine;
+// }

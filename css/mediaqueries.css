@@ -1,0 +1,124 @@
+@media (min-width:992px) {
+    .logo {
+        margin-left: 120px;
+        font-size: 20px;
+        padding-top: 17px;
+    }
+
+    .nav-btn {
+        font-size: larger;
+        width: 116px;
+    }
+
+    .main-nav {
+        margin-right: 170px;
+    }
+
+    .main-container {
+        height: 746px;
+    }
+
+    .image-container {
+        height: 566px;
+    }
+
+    .gallery {
+        height: 437px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(199.5px, 1fr));
+        grid-auto-rows: 205.5px;
+        column-gap: 30px;
+        margin-left: 57px;
+    }
+
+    img {
+        height: 173px;
+        width: 199.5px;
+    }
+}
+
+@media (max-width:991px) {
+
+    .main-container {
+        height: 746px;
+    }
+
+    img {
+        width: 280px;
+        height: 180px;
+    }
+
+    .image-container {
+        height: 747px;
+    }
+
+    .gallery {
+        display: grid;
+        height: 608px;
+        grid-template-columns: repeat(auto-fill, minmax(200.5px, 1fr));
+        grid-auto-rows: 215.5px;
+        margin-left: 15px;
+    }
+
+    img {
+        width: 199.5px;
+        height: 173px;
+    }
+
+    .logo {
+        margin-left: 45px;
+        font-size: 21px;
+        padding-top: 17px;
+    }
+
+    .main-nav {
+        margin-right: 30px;
+    }
+
+    .nav-btn {
+        font-size: larger;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-layout {
+        transform: none;
+        height: 835px;
+    }
+
+    .main-container {
+        height: 754px;
+    }
+
+    .image-container {
+        height: 739px;
+    }
+
+    .gallery {
+        display: grid;
+        height: 608px;
+        grid-template-columns: repeat(auto-fill, minmax(200.5px, 1fr));
+        grid-auto-rows: 215.5px;
+        margin-left: 34px;
+    }
+
+    img {
+        width: 280px;
+        height: 180px;
+    }
+
+    .logo {
+        margin-left: 25px;
+        font-size: 16px;
+        padding-top: 21px;
+    }
+
+    .main-nav {
+        display: flex;
+        width: 50%;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+    }
+}
