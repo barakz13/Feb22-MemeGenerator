@@ -15,19 +15,21 @@
             <div class="logo">Meme-Generator</div>
             <nav class="main-nav-container">
                 <div class="main-nav">
-                    <button class="nav-btn btn-gallery">Gallery</button>
+                    <button class="nav-btn btn-gallery" onclick="initGallery()">Gallery</button>
                     <button class="nav-btn btn-about">About</button>
                 </div>
                 <!-- <button class="btn-menu" onclick="toggleMenu()">☰</button> -->
             </nav>
         </header>
-        <h3 class="text text-top">Text Goes Here ↓</h3>
         <div class="main-container">
-            <div class="gallery">
+            <div class="image-container">
+                <div class="gallery">
+
+                </div>
             </div>
             <div class="editor-container">
                 <div class="canvas-container">
-                    <canvas id="my-canvas" height="500" width="500"></canvas>
+                    <canvas id="my-canvas" height="546" width="476"></canvas>
                 </div>
                 <div class="editor">
                     <div class="inside-color"> text color:
@@ -48,7 +50,6 @@
                 </div>
             </div>
         </div>
-        <h3 class="text text-bottom">Text Goes Here ↑</h3>
     </div>
 </body>
 <script src="js/gallery-controller.js"></script>

@@ -9,12 +9,19 @@ var gTextPos;
 function initEditor() {
     gElCanvas = document.getElementById("my-canvas");
     gCtx = gElCanvas.getContext("2d");
-    createImages();
-    gCurrImgUrl = gImgs[0].url;
+    var elEditor = document.querySelector('.editor-container');
+    elEditor.style.display = 'flex';
+    var elGallery = document.querySelector('.image-container');
+    elGallery.style.display = 'none';
+    var elMainContainer = document.querySelector('.main-container');
+    elMainContainer.style.height = '546px';
+    elMainContainer.style.marginTop = '25px';
+    var elMainLayout = document.querySelector('.main-layout');
+    elMainLayout.style.height = '640px';
     gCurrMemeLines = gMeme.lines[0];
+    gCurrMemeLines.txt = '';
     gTextPos = 30;
     renderMeme();
-    renderGallery();
 }
 
 function getImages() {
@@ -24,25 +31,6 @@ function getImages() {
 function getMeme() {
     return gMeme;
 }
-
-// function renderImg() {
-//     var imgForRender = new Image();
-//     imgForRender.src = gImgs[0].url;
-//     imgForRender.onload = function () {
-//         gCtx.drawImage(imgForRender, 0, 0);
-//     }
-// }
-
-// function renderTxt() {
-//     var currMemeLines = gMeme.lines[0];
-//     console.log(gMeme.lines[0]);
-//     gCtx.fillStyle = `${currMemeLines.color}`;
-//     gCtx.textAlign = `${currMemeLines.align}`;
-//     gCtx.font = `bold ${currMemeLines.size}px Impact`;
-//     gCtx.fillText(currMemeLines.txt, gElCanvas.width / 2, 30);
-//     gCtx.strokeText(currMemeLines.txt, gElCanvas.width / 2, 30);
-//     console.log(gCtx)
-// }
 
 function renderMeme() {
     var renderedImg = new Image();
@@ -82,19 +70,8 @@ function onChangeTxtSize() {
 }
 
 function onSwitchLine() {
-    var elBottomTxt = document.querySelector('.text-bottom');
-    var elTopTxt = document.querySelector('.text-top');
-    if (gCurrMemeLines === gMeme.lines[0]) {
-        gCurrMemeLines = gMeme.lines[1];
-        elBottomTxt.style.display = 'block';
-        elTopTxt.style.display = 'none';
-    }
-    else {
-        gCurrMemeLines = gMeme.lines[0];
-        elBottomTxt.style.display = 'none';
-        elTopTxt.style.display = 'block';
-    }
+    if (gCurrMemeLines === gMeme.lines[0]) gCurrMemeLines = gMeme.lines[1];
+    else gCurrMemeLines = gMeme.lines[0];
     renderMeme();
-
 }
 

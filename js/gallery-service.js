@@ -1,14 +1,23 @@
 'use strict';
 
+var gImgs = [];
+
 function onImgSelect(imgId) {
     var selectedImg = gImgs.find(img => img.id === imgId);
     var selectedImgUrl = selectedImg.url;
     gCurrImgUrl = selectedImgUrl;
-    renderMeme();
+    initEditor();
+
 }
 
 function createImages() {
     gImgs = [
+        createImg(1, 'img/1.jpg', ['donald', 'trump']),
+        createImg(2, 'img/2.jpg', ['dog', 'kiss']),
+        createImg(3, 'img/3.jpg', ['dog', 'baby']),
+        createImg(1, 'img/1.jpg', ['donald', 'trump']),
+        createImg(2, 'img/2.jpg', ['dog', 'kiss']),
+        createImg(3, 'img/3.jpg', ['dog', 'baby']),
         createImg(1, 'img/1.jpg', ['donald', 'trump']),
         createImg(2, 'img/2.jpg', ['dog', 'kiss']),
         createImg(3, 'img/3.jpg', ['dog', 'baby']),
@@ -27,8 +36,4 @@ function createImg(id, url, keywords) {
 
 function getCurrImgUrl() {
     return gCurrImgUrl;
-}
-
-function getImages() {
-    return gImgs;
 }
