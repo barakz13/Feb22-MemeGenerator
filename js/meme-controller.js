@@ -18,9 +18,6 @@ function initEditor() {
     elEditor.style.display = 'flex';
     var elGallery = document.querySelector('.image-container');
     elGallery.style.display = 'none';
-    var elMainContainer = document.querySelector('.main-container');
-    elMainContainer.style.height = '546px';
-    elMainContainer.style.marginTop = '25px';
     // var elMainLayout = document.querySelector('.main-layout');
     // elMainLayout.style.height = '640px';
     gCurrMemeLines = gMeme.lines[0];
@@ -162,20 +159,20 @@ function onAddLine() {
 }
 
 function onRemoveLine() {
-        if (gCurrMemeLines === gMeme.lines[0]) {
-            gMeme.lines[0].txt = '';
-            gNumOfLines = 2;
-        }
-        else if (gCurrMemeLines === gMeme.lines[1]) {
-            gMeme.lines[1].txt = '';
-            gNumOfLines = 2;
-        }
-        else {
-            gMeme.lines[2].txt = '';
-            gNumOfLines = 2;
-            gAddedThirdLine = false;
-            if (gLastLine === 0) gCurrMemeLines === gMeme.lines[1];
-            else gCurrMemeLines === gMeme.lines[0];
-        }
+    if (gCurrMemeLines === gMeme.lines[0]) {
+        gMeme.lines[0].txt = '';
+        gNumOfLines = 2;
+    }
+    else if (gCurrMemeLines === gMeme.lines[1]) {
+        gMeme.lines[1].txt = '';
+        gNumOfLines = 2;
+    }
+    else {
+        gMeme.lines[2].txt = '';
+        gNumOfLines = 2;
+        gAddedThirdLine = false;
+        if (gLastLine === 0) gCurrMemeLines === gMeme.lines[1];
+        else gCurrMemeLines === gMeme.lines[0];
+    }
     renderMeme();
 }

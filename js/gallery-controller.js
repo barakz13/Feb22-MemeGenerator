@@ -6,9 +6,6 @@ function initGallery() {
     elEditor.style.display = 'none';
     var elGallery = document.querySelector('.image-container');
     elGallery.style.display = 'block';
-    var elMainContainer = document.querySelector('.main-container');
-    elMainContainer.style.height = '566px';
-    elMainContainer.style.marginTop = '16px';
     createImages()
     renderGallery()
 }
@@ -23,6 +20,10 @@ function renderGallery() {
 
 function getImages() {
     return gImgs;
+}
+
+function toggleMenu() {
+    document.body.classList.toggle("menu-open");
 }
 
 
