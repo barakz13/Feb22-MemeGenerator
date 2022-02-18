@@ -29,12 +29,6 @@ var gMeme = {
     ]
 };
 
-function setLineTxt() {
-    var elTxt = document.querySelector('.meme-text-input');
-    var newTxt = elTxt.value;
-    gCurrMemeLines.txt = newTxt;
-}
-
 // function createLine() {
 //     var newLine = {
 //         txt: '',

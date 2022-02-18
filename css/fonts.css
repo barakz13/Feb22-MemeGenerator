@@ -7,3 +7,8 @@
     font-family: PoppinsLight;
     src: url(/Fonts/Poppins/Poppins-Light.ttf);
 }
+
+@font-face {
+    font-family: PoppinsSemiBold;
+    src: url(/Fonts/Poppins/Poppins-Light.ttf);
+}

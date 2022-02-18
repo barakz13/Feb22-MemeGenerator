@@ -18,12 +18,10 @@ function initEditor() {
     elEditor.style.display = 'flex';
     var elGallery = document.querySelector('.image-container');
     elGallery.style.display = 'none';
-    // var elMainLayout = document.querySelector('.main-layout');
-    // elMainLayout.style.height = '640px';
     gCurrMemeLines = gMeme.lines[0];
     gCurrMemeLines.txt = '';
     gTopTxtPos = 50;
-    gBottomTxtPos = 480;
+    gBottomTxtPos = 460;
     gCenterTxtPos = 265;
     gNumOfLines = 1;
     gAddedThirdLine = false;
@@ -63,8 +61,10 @@ function renderMeme() {
     }
 }
 
-function onChangeTxt() {
-    setLineTxt();
+function onChangeTxt(e) {
+    var text = e.target.value;
+    console.log(text);
+    gCurrMemeLines.txt = text
     renderMeme();
     var elTxt = document.querySelector('.meme-text-input');
     elTxt.value = ''
@@ -76,9 +76,9 @@ function onChangeTxtColor() {
     renderMeme();
 }
 
-function onChangeTxtSize() {
-    const EL_SIZE_SELECTOR_VAL = document.querySelector('[name="txt-size"]').value
-    gCurrMemeLines.size = EL_SIZE_SELECTOR_VAL;
+function onChangeTxtSize(size) {
+    if (size === 'up') gCurrMemeLines.size += 3;
+    else gCurrMemeLines.size -= 3;
     renderMeme();
 }
 
@@ -175,4 +175,16 @@ function onRemoveLine() {
         else gCurrMemeLines === gMeme.lines[0];
     }
     renderMeme();
+}
+
+var text = document.getElementById("text");
+text.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {
+        onChangeTxt(e);
+    }
+});
+
+function validate(e) {
+    
+
 }

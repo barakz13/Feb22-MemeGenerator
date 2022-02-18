@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Meme-Generator</title>
 </head>
 
@@ -24,6 +25,7 @@
                 <button class="nav-btn btn-menu" onclick="toggleMenu()">☰</button>
             </nav>
         </header>
+        <span class="mq-value"></span>
         <div class="main-container">
             <div class="image-container">
                 <div class="gallery">
@@ -32,47 +34,49 @@
             </div>
             <div class="editor-container">
                 <div class="canvas-container">
-                    <canvas id="my-canvas" height="495" width="495"></canvas>
+                    <canvas id="my-canvas" height="476" width="546"></canvas>
                 </div>
                 <div class="editor">
-                    <div class="inside-color"> text color:
-                        <input type="color" name="txt-color" value="#FFFFFF" oninput="onChangeTxtColor()" />
+                    <div class="change-text">
+                        <input type="text" id="text" class="meme-text-input">
                     </div>
-                    <div class="text-pos-btns">
+                    <div class="add-remove-raise-lower">
                         <button class="arrow-up" onclick="onRaiseText()">↑</button>
                         <button class="arrow-down" onclick="onLowerText()">↓</button>
-                    </div>
-                    <div class="change-text-color">
-                        <button onclick="onChangeTxt()">Text</button>
-                        <input class="meme-text-input">
-                    </div>
-                    <div class="font-family-btn">
-                        <select onchange="onSetFont(this.value)">
-                            <option value="Impact">Impact</option>
-                            <option value="Arial">Arial</option>
-                            <option value="Comic-sans">Comic Sans</option>
-                        </select>
-                    </div>
-                    <div class="text-align-btns">
-                        <button value="left" class="fa fa-align-left" onclick="onTextAlign(this.value)"></button>
-                        <button value="center" class="fa fa-align-center" onclick="onTextAlign(this.value)"></button>
-                        <button value="right" class="fa fa-align-right" onclick="onTextAlign(this.value)"></button>
-                    </div>
-                    <div class="change-text-size">
-                        <h4>Increase/Decrease Text Size</h3>
-                            <input value="1" min="15" max="100" type="range" name="txt-size" id="pen-thickness"
-                                oninput="onChangeTxtSize()" />
-                    </div>
-                    <div class="switch-line">
-                        <button onclick="onSwitchLine()">Switch Line</button>
-                    </div>
-                    <div class="download">
-                        <a href="#" onclick="downloadMeme(this)">Download</a>
-                    </div>
-                    <div class="lines-number">
                         <button class="line-add" onclick="onAddLine()">+</button>
-                        <button class="line-remove" onclick="onRemoveLine()">-</button>
+                        <button class="line-remove" onclick="onRemoveLine()">🗑</button>
                     </div>
+                    <div class="size-align-font-color-switch">
+                        <div class="editor-props top-row">
+                            <div class="up-down-btns">
+                                <button class="btn-editor size-bigger" value="up"
+                                    onclick="onChangeTxtSize(this.value)">A+</button>
+                                <button class="btn-editor size-smaller" value="down"
+                                    onclick="onChangeTxtSize(this.value)">A-</button>
+                            </div>
+                            <div class="text-align">
+                                <button value="left" class="fa fa-align-left fa-2x btn-editor align-left"
+                                    onclick="onTextAlign(this.value)"></button>
+                                <button value="center" class="fa fa-align-center fa-2x btn-editor"
+                                    onclick="onTextAlign(this.value)"></button>
+                                <button value="right" class="fa fa-align-right fa-2x btn-editor align-right"
+                                    onclick="onTextAlign(this.value)"></button>
+                            </div>
+                        </div>
+                        <div class="editor-props bottom-row">
+                            <select class="font-change" onchange="onSetFont(this.value)">
+                                <option value="Impact">IMPACT</option>
+                                <option value="Arial">ARIAL</option>
+                                <option value="Comic-sans">COMIC SANS</option>
+                            </select>
+                            <button class="btn-editor btn-switch" onclick="onSwitchLine()">Switch Line</button>
+                            <input class="txt-color btn-editor" type="color" name="txt-color" value="#FFFFFF"
+                                oninput="onChangeTxtColor()" />
+                        </div>
+                    </div>
+                    <button class="download-btn"><a href="#" class="download-link"
+                            onclick="downloadMeme(this)"><span>⭳</span>Download</a>
+                    </button>
                 </div>
             </div>
         </div>

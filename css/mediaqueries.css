@@ -50,7 +50,7 @@
     }
 
     .main-container {
-        height: 746px;
+        height: 566px;
         margin-left: 7px;
         margin-right: 7px;
         margin-top: 16px;
@@ -67,8 +67,7 @@
         height: 437px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(199.5px, 1fr));
-        grid-auto-rows: 205.5px;
-        column-gap: 30px;
+        grid-auto-rows: 200.5px;
         margin-left: 57px;
         overflow-y: scroll;
     }
@@ -80,6 +79,258 @@
 
     img:hover {
         transform: scale(1.04);
+    }
+
+    #my-canvas {
+        width: 476px;
+        height: 546px;
+    }
+
+    .canvas-container {
+        order: -1;
+    }
+
+    .editor-container {
+        width: 476px;
+        height: 546px;
+    }
+
+    .editor {
+        width: 525px;
+        background-color: rgb(235, 238, 243, .1);
+        border-radius: 34px;
+        box-shadow:
+            inset 0px 5px rgb(235, 238, 243, .03),
+            0px 5px rgb(235, 238, 243, .05);
+    }
+
+    .meme-text-input {
+        margin-top: 24px;
+        caret-color: transparent;
+        font-size: 25px;
+        color: #3D3D3D;
+        font-family: PoppinsMed;
+        text-align: center;
+        width: 444.5px;
+        height: 56px;
+        border: none;
+        border-radius: 50px;
+        background-color: #EBEEF3;
+        box-shadow:
+            inset 0px 5px rgb(255, 255, 255),
+            0px 5px rgb(184, 200, 206);
+    }
+
+    .meme-text-input:focus {
+        outline: none;
+    }
+
+    .add-remove-raise-lower {
+        margin-top: 20px;
+        justify-content: space-between;
+        display: flex;
+        width: 300px;
+        height: 58px;
+    }
+
+    .line-add {
+        width: 57px;
+        height: 52px;
+        background-image: linear-gradient(320deg, #38B64B, #42EB5C);
+        border-radius: 10px;
+        font-size: 50px;
+        border: none;
+        color: white;
+        padding-left: 6px;
+        box-shadow:
+            inset 0px 5px rgb(200, 230, 172),
+            0px 5px rgb(47, 100, 31);
+        cursor: pointer;
+        padding-top: 7px;
+        line-height: 1px;
+    }
+
+    .line-remove {
+        width: 57px;
+        height: 52px;
+        background-image: linear-gradient(320deg, #CF1D37, #F05036);
+        border-radius: 10px;
+        font-size: 50px;
+        border: none;
+        color: white;
+        line-height: 1px;
+        padding-left: 9px;
+        padding-top: 9px;
+        box-shadow:
+            inset 0px 5px rgb(224, 185, 184),
+            0px 5px rgb(141, 32, 48);
+        cursor: pointer;
+
+    }
+
+    .arrow-up {
+        width: 57px;
+        height: 52px;
+        background-image: linear-gradient(320deg, #119ABD, #63C3DB);
+        border-radius: 10px;
+        font-size: 40px;
+        border: none;
+        color: white;
+        line-height: 1px;
+        padding-bottom: 7px;
+        box-shadow:
+            inset 0px 6px rgb(184, 213, 224),
+            0px 6px rgb(76, 131, 148);
+        cursor: pointer;
+
+    }
+
+    .arrow-down {
+        width: 57px;
+        height: 52px;
+        background-image: linear-gradient(320deg, #119ABD, #63C3DB);
+        border-radius: 10px;
+        font-size: 40px;
+        border: none;
+        color: white;
+        line-height: 1px;
+        padding-bottom: 7px;
+        box-shadow:
+            inset 0px 6px rgb(184, 213, 224),
+            0px 6px rgb(76, 131, 148);
+        cursor: pointer;
+
+    }
+
+    .size-align-font-color-switch {
+        margin-top: 24px;
+        background-color: #19A59F;
+        width: 444.5px;
+        height: 149.5px;
+        border-radius: 21px;
+    }
+
+    .editor-props {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .bottom-row {
+        display: flex;
+        justify-content: space-between;
+        height: 71px;
+        margin-top: 10px;
+    }
+
+    .top-row {
+        height: 61px;
+        margin-top: 11px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-editor {
+        font-family: PoppinsSemiBold;
+        cursor: pointer;
+        color: #22252C;
+        width: 54.5px;
+        height: 50px;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 5px rgb(59, 117, 121);
+        text-shadow: 1px 0 #22252C;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    .up-down-btns {
+        width: 162px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-align {
+        width: 248px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .size-bigger {
+        padding-left: 10px;
+        font-size: 29px;
+        margin-left: 18px;
+        width: 54px;
+    }
+
+    .size-smaller {
+        padding-left: 13px;
+        letter-spacing: 5px;
+        font-size: 29px;
+        width: 55px;
+    }
+
+    .align-left {
+        padding-left: 10px;
+    }
+
+    .align-right {
+        padding-right: 8px;
+        margin-right: 16px;
+    }
+
+    .font-change {
+        width: 235px;
+        height: 50px;
+        font-family: PoppinsSemiBold;
+        font-size: 25px;
+        padding-left: 32px;
+        cursor: pointer;
+        color: #22252C;
+        text-shadow: 1px 0 #22252C;
+        letter-spacing: 1px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 5px rgb(59, 117, 121);
+        margin-left: 18px;
+    }
+
+    .txt-color {
+        background-color: rgb(255, 255, 255, 0);
+        box-shadow: none;
+        margin-right: 16px;
+    }
+
+    .btn-switch {
+        font-size: 13px;
+        padding-left: 4px;
+    }
+
+    .download-btn {
+        width: 212px;
+        height: 50px;
+        margin-top: 140px;
+        background-color: #8F44BB;
+        border: none;
+        font-family: PoppinsMed;
+        font-size: 21px;
+        border-radius: 15px;
+        box-shadow:
+            inset 0px 6px #FFFFFF,
+            0px 6px rgb(97, 46, 131);
+    }
+
+    .download-link {
+        color: white;
+        text-decoration: none;
+        width: 141px;
+    }
+
+    .download-link span {
+        margin-right: 14px;
+        font-size: 30px;
+        padding-top: 10px;
     }
 }
 
@@ -145,7 +396,7 @@
         display: grid;
         height: 608px;
         grid-template-columns: repeat(auto-fill, minmax(200.5px, 1fr));
-        grid-auto-rows: 215.5px;
+        grid-auto-rows: 203.5px;
         margin-left: 37px;
         overflow-y: scroll;
     }
@@ -196,7 +447,6 @@
         background-image: linear-gradient(265deg, #33BE6D, #0C98B9);
         opacity: 0.9;
         height: 100vh;
-        border-left: solid 1px var(--clr6);
         transform: translateX(100%);
         transition: transform .6s, box-shadow .6s;
     }
@@ -240,13 +490,13 @@
     }
 
     .image-container {
-        height: 1216px;
+        height: 1164px;
     }
 
     .gallery {
         margin-top: 218px;
         display: grid;
-        height: 1032px;
+        height: 915px;
         grid-template-columns: repeat(auto-fill, minmax(288.5px, 1fr));
         grid-auto-rows: 301.5px;
         row-gap: 17px;
