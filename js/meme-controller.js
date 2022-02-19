@@ -39,7 +39,6 @@ function getMeme() {
 
 function renderMeme() {
     var renderedImg = new Image();
-    renderedImg.src = gCurrImgUrl;
     renderedImg.onload = function () {
         gCtx.drawImage(renderedImg, 0, 0);
         gCtx.transform(1, 0, 0, -1, 0, gElCanvas)
@@ -59,6 +58,7 @@ function renderMeme() {
         gCtx.fillText(gMeme.lines[2].txt, gElCanvas.width / 2, gCenterTxtPos);
         gCtx.strokeText(gMeme.lines[2].txt, gElCanvas.width / 2, gCenterTxtPos);
     }
+    renderedImg.src = gCurrImgUrl;
 }
 
 function onChangeTxt(e) {
@@ -177,14 +177,10 @@ function onRemoveLine() {
     renderMeme();
 }
 
-var text = document.getElementById("text");
+var text = document.getElementById("text-change");
 text.addEventListener("keydown", function (e) {
     if (e.code === "Enter") {
         onChangeTxt(e);
     }
 });
 
-function validate(e) {
-    
-
-}
