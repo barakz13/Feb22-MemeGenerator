@@ -23,15 +23,10 @@ body {
     color: white;
 }
 
-
 .nav-btn:hover {
     color: #21AC91;
     background-color: white;
 }
-
-
-
-
 
 .main-container {
     display: flex;
@@ -83,11 +78,11 @@ img {
 .editor-container {
     display: none;
     width: 100%;
+    margin-top: 21px;
 }
 
 .editor {
     display: flex;
-
     align-items: center;
     background-color: rgb(235, 238, 243, .1);
     border-radius: 34px;
@@ -98,7 +93,6 @@ img {
 
 .meme-text-input {
     width: 100%;
-    caret-color: transparent;
     font-size: 25px;
     color: #3D3D3D;
     font-family: PoppinsMed;

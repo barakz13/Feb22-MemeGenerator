@@ -53,12 +53,12 @@
         height: 566px;
         margin-left: 7px;
         margin-right: 7px;
-        margin-top: 16px;
     }
 
     .image-container {
         height: 566px;
         width: 1171px;
+        margin-top: 16px;
     }
 
     .gallery {
@@ -77,10 +77,6 @@
         width: 199.5px;
     }
 
-    img:hover {
-        transform: scale(1.04);
-    }
-
     #my-canvas {
         margin-left: 6px;
         margin-top: 6px;
@@ -92,7 +88,7 @@
     .canvas-container {
         width: 488px;
         height: 556px;
-        margin-left: 81px;
+        margin-left: 78px;
         order: -1;
     }
 
@@ -103,7 +99,7 @@
     }
 
     .editor {
-        margin-right: 81px;
+        margin-right: 74px;
         width: 525px;
         height: 546px;
         flex-direction: column;
@@ -128,8 +124,6 @@
     }
 
 }
-
-
 
 @media (max-width:1279px) {
 
@@ -176,16 +170,11 @@
         height: 746px;
         margin-left: 7px;
         margin-right: 7px;
-        margin-top: 16px;
-    }
-
-
-    img:hover {
-        transform: scale(1.04);
     }
 
     .image-container {
         height: 747px;
+        margin-top: 16px;
     }
 
     .gallery {
@@ -234,22 +223,6 @@
         margin-left: 15%;
     }
 
-    /* .editor {
-        width: 44%;
-    }
-
-    .size-align-font-color-switch {
-        width: 90%;
-    }
-
-    .change-text {
-        width: 95%;
-    }
-
-    .meme-text-input {
-        width: 95%;
-    } */
-
     .editor-container {
         flex-direction: column;
         justify-content: space-between;
@@ -284,10 +257,6 @@
         width: 444.5px;
     }
 
-    /* .size-align-font-color-switch {
-        order: 2;
-    } */
-
     .size-align-font-color-switch {
         width: 444.5px;
         height: 149.5px;
@@ -295,8 +264,6 @@
     }
 
 }
-
-
 
 @media (max-width: 680px) {
     .main-header {
@@ -360,11 +327,11 @@
         height: 1164px;
         margin-left: 17px;
         margin-right: 20px;
-        margin-top: 17px;
     }
 
     .image-container {
         height: 1164px;
+        margin-top: 17px;
     }
 
     .gallery {
@@ -380,10 +347,6 @@
     img {
         width: 286.5px;
         height: 302px;
-    }
-
-    img:hover {
-        transform: none;
     }
 
     .logo {

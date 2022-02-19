@@ -63,7 +63,6 @@ function renderMeme() {
 
 function onChangeTxt(e) {
     var text = e.target.value;
-    console.log(text);
     gCurrMemeLines.txt = text
     renderMeme();
     var elTxt = document.querySelector('.meme-text-input');
@@ -83,25 +82,24 @@ function onChangeTxtSize(size) {
 }
 
 function onSwitchLine() {
-    if (gNumOfLines === 1) return;
+    if (gNumOfLines === 0) return;
     if (gNumOfLines === 2) {
         if (gLastLine === 0) {
             gCurrMemeLines = gMeme.lines[1];
             gLastLine = 1;
-            console.log('if rishon')
         }
         else {
             gCurrMemeLines = gMeme.lines[0];
             gLastLine = 0;
-            console.log('if sheni')
 
         }
     }
     else {
         if (!gAddedThirdLine) {
+            if (gCurrMemeLines === gMeme.lines[0]) gLastLine = 0;
+            else gLastLine = 1;
             gCurrMemeLines = gMeme.lines[2];
             gAddedThirdLine = true;
-            console.log('if shlishi')
 
         }
         else {
@@ -109,12 +107,10 @@ function onSwitchLine() {
             else if (gLastLine === 0) {
                 gCurrMemeLines = gMeme.lines[1]
                 gLastLine = 1;
-                console.log('if revii')
             }
             else {
                 gCurrMemeLines = gMeme.lines[0]
-                gLastLine = 1;
-                console.log('if hamishi')
+                gLastLine = 0;
             }
         }
     }
@@ -153,15 +149,42 @@ function downloadMeme(link) {
 }
 
 function onAddLine() {
-    if (gNumOfLines === 1) gNumOfLines = 2;
-    else gNumOfLines = 3;
+    switch (gNumOfLines) {
+        case 0:
+            gNumOfLines = 1;
+            break;
+        case 1:
+            gNumOfLines = 2;
+            break;
+        case 2:
+            gNumOfLines = 3;
+            break;
+        case 3:
+            return;
+    }
     onSwitchLine();
+}
+
+function linesCountForRemove(){
+    switch (gNumOfLines) {
+        case 3:
+            gNumOfLines = 2;
+            break;
+        case 2:
+            gNumOfLines = 1;
+            break;
+        case 1:
+            gNumOfLines = 0;
+            break;
+        case 0:
+            return;
+    }
 }
 
 function onRemoveLine() {
     if (gCurrMemeLines === gMeme.lines[0]) {
         gMeme.lines[0].txt = '';
-        gNumOfLines = 2;
+        linesCountForRemove();
     }
     else if (gCurrMemeLines === gMeme.lines[1]) {
         gMeme.lines[1].txt = '';
