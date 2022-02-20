@@ -1,4 +1,8 @@
 @media (min-width:1280px) {
+    body {
+        overflow-y: hidden;
+    }
+
     .main-layout {
         width: 1257px;
         margin: 0 auto;
@@ -25,6 +29,7 @@
         display: none;
     }
 
+
     .main-nav {
         width: 468px;
         display: flex;
@@ -45,8 +50,8 @@
     }
 
     .btn-about {
-        margin-right: 194px;
-        margin-left: 21px;
+        margin-right: 218px;
+        margin-left: 22.5px;
     }
 
     .main-container {
@@ -93,12 +98,14 @@
     }
 
     .editor-container {
+        margin-top: 21px;
         width: 476px;
         height: 546px;
         justify-content: space-between;
     }
 
     .editor {
+        align-items: center;
         margin-right: 74px;
         width: 525px;
         height: 546px;
@@ -123,9 +130,76 @@
         margin-top: 24px;
     }
 
+    .editor-props {
+        justify-content: space-evenly;
+    }
+
+    .top-row {
+        margin-top: 11px;
+        height: 61px;
+        justify-content: space-between;
+    }
+
+    .bottom-row {
+        margin-top: 10px;
+        height: 71px;
+        justify-content: space-between;
+    }
+
+    .txt-size-btns {
+        width: 162px;
+        justify-content: space-between;
+    }
+
+    .text-align {
+        width: 248px;
+    }
+
+    .align-right {
+        margin-right: 16px;
+    }
+
+    .add-remove-raise-lower {
+        margin-top: 20px;
+        width: 292px;
+        height: 58px;
+    }
+    
+    .direction-btns {
+        width: 50%;
+    }
+
+    .add-remove-btns {
+        width: 50%;
+    }
+
+    .size-bigger {
+        margin-left: 18px;
+    }
+
+    .font-change {
+        width: 235px;
+        margin-left: 18px;
+    }
+
+    .color-switch-btns {
+        width: 159px;
+        justify-content: space-between;
+    }
+
+    .btn-txt-color {
+        margin-right: 16px;
+    }
+
+    .download-btn {
+        width: 212px;
+    }
 }
 
 @media (max-width:1279px) {
+    body {
+        overflow-y: hidden;
+    }
 
     .main-layout {
         width: 90%;
@@ -213,22 +287,24 @@
         margin-left: 0px;
         margin-top: 6px;
         width: 100%;
-        height: 415px;
+        height: 388px;
         border-radius: 34px;
     }
 
     .canvas-container {
         width: 70%;
-        height: 458px;
+        height: 394px;
         margin-left: 15%;
     }
 
     .editor-container {
         flex-direction: column;
         justify-content: space-between;
+        margin-top: 21px;
     }
 
     .editor {
+        align-items: center;
         margin-top: 15px;
         height: 436px;
         width: 100%;
@@ -250,17 +326,79 @@
 
     .add-remove-raise-lower {
         order: 1;
-        margin-bottom: 7px;
+        margin-bottom: -15px;
+        width: 292px;
+        height: 58px;
+    }
+
+    .direction-btns {
+        width: 50%;
+    }
+
+    .add-remove-btns {
+        width: 50%;
     }
 
     .change-text {
         width: 444.5px;
     }
 
+    .editor-props {
+        justify-content: space-evenly;
+    }
+
     .size-align-font-color-switch {
         width: 444.5px;
         height: 149.5px;
         margin-top: 24px;
+    }
+
+    .top-row {
+        margin-top: 11px;
+        height: 61px;
+        justify-content: space-between;
+    }
+
+    .text-align {
+        width: 248px;
+        margin-left: 18px;
+    }
+
+    .align-right {
+        margin-right: 16px;
+    }
+
+    .bottom-row {
+        margin-top: 10px;
+        height: 71px;
+        justify-content: space-between;
+    }
+
+    .txt-size-btns {
+        width: 162px;
+        justify-content: space-between;
+    }
+
+    .size-bigger {
+        margin-left: 18px;
+    }
+
+    .font-change {
+        width: 235px;
+        margin-left: 18px;
+    }
+
+    .color-switch-btns {
+        justify-content: space-between;
+        width: 159px;
+    }
+
+    .btn-txt-color {
+        margin-right: 16px;
+    }
+
+    .download-btn {
+        width: 212px;
     }
 
 }
@@ -275,7 +413,7 @@
         margin-top: -8px;
         position: static;
         transform: none;
-        height: 1280px;
+        height: 936px;
         width: 100%;
     }
 
@@ -310,13 +448,23 @@
     }
 
     .btn-menu {
-        margin-right: 41px;
+        margin-right: 40px;
         display: block;
-        width: 70px;
-        height: 68px;
-        border-radius: 50px;
-        font-size: 45px;
-        padding-bottom: 10px;
+        padding-bottom: 59px;
+        font-size: 40px;
+        margin-left: 0px;
+        width: 64px;
+        font-family: PoppinsMed;
+        height: 64px;
+        border: none;
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    body.menu-open .btn-menu {
+        display: none;
     }
 
     .btn-about {
@@ -324,7 +472,7 @@
     }
 
     .main-container {
-        height: 1164px;
+        height: 796px;
         margin-left: 17px;
         margin-right: 20px;
     }
@@ -361,9 +509,10 @@
     }
 
     .editor {
+        align-items: center;
         width: 90%;
         margin-left: 5%;
-        height: 415px;
+        height: 318px;
     }
 
     .canvas-container {
@@ -382,6 +531,7 @@
 
     .add-remove-raise-lower {
         margin-bottom: 0px;
+        margin-top: 20px;
     }
 
     .change-text {
@@ -395,5 +545,145 @@
     .size-align-font-color-switch {
         height: 149.5px;
         margin-top: 24px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-y: visible;
+    }
+
+    .main-layout {
+        height: 1000px;
+    }
+
+    .logo {
+        margin-left: 28px;
+    }
+
+    .main-nav {
+        right: -235px;
+    }
+
+    .btn-menu {
+        margin-right: 16px;
+        border-radius: 0px;
+    }
+
+    .nav-btn {
+        width: 118px;
+        font-size: 20px;
+    }
+
+    .btn-about {
+        padding-right: 9px;
+    }
+
+    .main-container {
+        height: 844px;
+    }
+
+    .canvas-container {
+        width: 90%;
+        height: 258px;
+        margin-left: 5%;
+    }
+
+    #my-canvas {
+        height: 250px;
+    }
+
+    .editor-container {
+        margin-top: 15px;
+    }
+
+    .editor {
+        height: 556px;
+        width: 84%;
+        margin-left: 8%;
+        margin-top: 15px;
+    }
+
+    .meme-text-input {
+        margin-top: 0px;
+    }
+
+    .size-align-font-color-switch {
+        margin-top: 5px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .top-row {
+        margin-top: 6px;
+        height: 44%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .txt-size-btns {
+        margin-left: 5%;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .size-bigger {
+        margin-left: 0px;
+    }
+
+    .bottom-row {
+        margin-top: 13px;
+        height: 44%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .text-align {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10px;
+    }
+
+    .align-right {
+        margin-right: 0px;
+    }
+
+    .font-change {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 10px;
+    }
+
+    .color-switch-btns {
+        width: 90%;
+        margin-left: 5%;
+        justify-content: space-around;
+    }
+
+    .btn-txt-color {
+        margin-right: 0px;
+    }
+
+    .add-remove-raise-lower {
+        margin-top: 0px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        height: 127px;
+    }
+
+    .direction-btns {
+        width: 90%;
+    }
+
+    .add-remove-btns {
+        width: 90%;
+    }
+
+    .download-btn {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        width: 90%;
     }
 }

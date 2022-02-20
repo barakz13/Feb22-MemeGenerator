@@ -33,15 +33,17 @@ function getImages() {
     return gImgs;
 }
 
-function getMeme() {
-    return gMeme;
-}
+
 
 function renderMeme() {
+    // const meme = getMeme()
     var renderedImg = new Image();
     renderedImg.onload = function () {
         gCtx.drawImage(renderedImg, 0, 0);
         gCtx.transform(1, 0, 0, -1, 0, gElCanvas)
+        // meme.lines.forEach(line => {
+        //     drawLine(line)
+        // }
         gCtx.fillStyle = `${gMeme.lines[0].color}`;
         gCtx.textAlign = `${gMeme.lines[0].align}`;
         gCtx.font = `bold ${gMeme.lines[0].size}px ${gMeme.lines[0].font}`;
@@ -165,7 +167,7 @@ function onAddLine() {
     onSwitchLine();
 }
 
-function linesCountForRemove(){
+function linesCountForRemove() {
     switch (gNumOfLines) {
         case 3:
             gNumOfLines = 2;

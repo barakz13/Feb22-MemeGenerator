@@ -6,7 +6,6 @@ body {
     background: linear-gradient(150deg, #F64F8B, #F8825B);
     max-height: 1280px;
     direction: ltr;
-    overflow-y: hidden;
 }
 
 .main-header {
@@ -23,7 +22,7 @@ body {
     color: white;
 }
 
-.nav-btn:hover {
+.nav-btn:hover, .btn-menu:hover {
     color: #21AC91;
     background-color: white;
 }
@@ -78,12 +77,10 @@ img {
 .editor-container {
     display: none;
     width: 100%;
-    margin-top: 21px;
 }
 
 .editor {
     display: flex;
-    align-items: center;
     background-color: rgb(235, 238, 243, .1);
     border-radius: 34px;
     box-shadow:
@@ -111,14 +108,22 @@ img {
 }
 
 .add-remove-raise-lower {
-    width: 300px;
-    margin-top: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
-    height: 58px;
+}
+
+.direction-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-remove-btns {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .line-add {
+    margin-right: 7px;
     width: 57px;
     height: 52px;
     background-image: linear-gradient(320deg, #38B64B, #42EB5C);
@@ -171,6 +176,7 @@ img {
 }
 
 .arrow-down {
+    margin-left: 7px;
     width: 57px;
     height: 52px;
     background-image: linear-gradient(320deg, #119ABD, #63C3DB);
@@ -194,21 +200,14 @@ img {
 
 .editor-props {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .bottom-row {
     display: flex;
-    justify-content: space-between;
-    height: 71px;
-    margin-top: 10px;
 }
 
 .top-row {
-    height: 61px;
-    margin-top: 11px;
     display: flex;
-    justify-content: space-between;
 }
 
 .btn-editor {
@@ -226,14 +225,11 @@ img {
     font-weight: bold;
 }
 
-.up-down-btns {
-    width: 162px;
+.txt-size-btns {
     display: flex;
-    justify-content: space-between;
 }
 
 .text-align {
-    width: 248px;
     display: flex;
     justify-content: space-between;
 }
@@ -241,7 +237,6 @@ img {
 .size-bigger {
     padding-left: 10px;
     font-size: 29px;
-    margin-left: 18px;
     width: 54px;
 }
 
@@ -258,12 +253,9 @@ img {
 
 .align-right {
     padding-right: 8px;
-    margin-right: 16px;
 }
 
 .font-change {
-    margin-left: 18px;
-    width: 235px;
     height: 50px;
     font-family: PoppinsSemiBold;
     font-size: 25px;
@@ -278,19 +270,46 @@ img {
     box-shadow: 0px 5px rgb(59, 117, 121);
 }
 
+.color-switch-btns {
+    display: flex;
+}
+
 .txt-color {
     background-color: rgb(255, 255, 255, 0);
     box-shadow: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.palette {
+    position: absolute;
+    width: 40.5px;
+    height: 50px;
+    box-shadow: none;
+    margin-left: 10px;
+    color: #22252C;
+}
+
+.btn-txt-color-helper {
+    position: absolute;
     margin-right: 16px;
 }
 
-.btn-switch {
-    font-size: 13px;
-    padding-left: 4px;
+.btn-switch-txt {
+    font-size: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12px;
+}
+
+.btn-switch span {
+    height: 20px;
+    position: absolute;
+    padding-top: 3px;
 }
 
 .download-btn {
-    width: 212px;
     height: 50px;
     background-color: #8F44BB;
     border: none;

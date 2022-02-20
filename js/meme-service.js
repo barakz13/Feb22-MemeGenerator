@@ -39,3 +39,7 @@ var gMeme = {
 //     }
 //     return newLine;
 // }
+
+function getMeme() {
+    return gMeme;
+}
