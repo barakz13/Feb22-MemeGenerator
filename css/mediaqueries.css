@@ -601,6 +601,7 @@
 
   .logo {
     margin-left: 28px;
+    height: 98px;
   }
 
   .main-nav {
@@ -610,6 +611,7 @@
   .btn-menu {
     margin-right: 16px;
     border-radius: 50%;
+    height: 53px;
   }
 
   .nav-btn {
@@ -630,13 +632,12 @@
   }
 
   .gallery {
-    /* margin-left: 16px; */
     height: 602px;
   }
 
-  /* img {
-    width: 237.5px;
-  } */
+  img {
+    width: 305.5px;
+  }
 
   .canvas-container {
     width: 90%;
@@ -748,8 +749,8 @@
   }
 
   .line-remove {
-    padding-left: 0px;
-    font-size: 40px;
+    padding-left: 4px;
+    font-size: 35px;
   }
 
   .download-btn {
