@@ -1,334 +1,319 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(150deg, #F64F8B, #F8825B);
-    max-height: 1280px;
-    direction: ltr;
+  background: linear-gradient(150deg, #f64f8b, #f8825b);
+  max-height: 1280px;
+  min-height: 1px;
+  direction: ltr;
+  margin: 0;
 }
 
 .main-header {
-    background-image: linear-gradient(300deg, #33BE6D, #0C98B9);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-image: linear-gradient(300deg, #33be6d, #0c98b9);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-family: PoppinsMed;
-    width: 200px;
-    color: white;
+  font-family: PoppinsMed;
+  width: 200px;
+  color: white;
 }
 
-.nav-btn:hover, .btn-menu:hover {
-    color: #21AC91;
-    background-color: white;
+.nav-btn:hover,
+.btn-menu:hover {
+  color: #21ac91;
+  background-color: white;
 }
 
 .main-container {
-    display: flex;
+  display: flex;
 }
 
 .image-container {
-    background-color: #383B42;
-    width: 100%;
-    border-radius: 12px;
+  background-color: #383b42;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .gallery {
-
-    overflow-x: hidden;
-
+  overflow-x: hidden;
 }
 
 .gallery::-webkit-scrollbar-track {
-    background: #22252C;
-    margin-bottom: 6px;
-    border-radius: 10px;
+  background: #22252c;
+  margin-bottom: 6px;
+  border-radius: 10px;
 }
 
 .gallery::-webkit-scrollbar {
-    width: 13px;
+  width: 13px;
 }
 
 .gallery::-webkit-scrollbar-thumb {
-    height: 8px;
-    border-radius: 10px;
-    background-image: linear-gradient(270deg, #33BE6D, #0C98B9);
+  height: 8px;
+  border-radius: 10px;
+  background-image: linear-gradient(270deg, #33be6d, #0c98b9);
 }
 
 img {
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0px 3px 3px -1px rgb(44, 43, 43);
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -1px rgb(44, 43, 43);
 }
 
 .canvas-container {
-    background-color: rgb(235, 238, 243, .1);
-    border-radius: 34px;
-    box-shadow:
-        inset 0px 5px rgb(235, 238, 243, .03),
-        0px 5px rgb(235, 238, 243, .05);
-
+  background-color: rgb(235, 238, 243, 0.1);
+  border-radius: 34px;
+  box-shadow: inset 0px 5px rgb(235, 238, 243, 0.03),
+    0px 5px rgb(235, 238, 243, 0.05);
 }
 
 .editor-container {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 
 .editor {
-    display: flex;
-    background-color: rgb(235, 238, 243, .1);
-    border-radius: 34px;
-    box-shadow:
-        inset 0px 5px rgb(235, 238, 243, .03),
-        0px 5px rgb(235, 238, 243, .05);
+  display: flex;
+  background-color: rgb(235, 238, 243, 0.1);
+  border-radius: 34px;
+  box-shadow: inset 0px 5px rgb(235, 238, 243, 0.03),
+    0px 5px rgb(235, 238, 243, 0.05);
 }
 
 .meme-text-input {
-    width: 100%;
-    font-size: 25px;
-    color: #3D3D3D;
-    font-family: PoppinsMed;
-    text-align: center;
-    height: 56px;
-    border: none;
-    border-radius: 50px;
-    background-color: #EBEEF3;
-    box-shadow:
-        inset 0px 5px rgb(255, 255, 255),
-        0px 5px rgb(184, 200, 206);
+  width: 100%;
+  font-size: 25px;
+  color: #3d3d3d;
+  font-family: PoppinsMed;
+  text-align: center;
+  height: 56px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ebeef3;
+  box-shadow: inset 0px 5px rgb(255, 255, 255), 0px 5px rgb(184, 200, 206);
 }
 
 .meme-text-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .add-remove-raise-lower {
-    justify-content: space-around;
-    display: flex;
+  justify-content: space-around;
+  display: flex;
 }
 
 .direction-btns {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .add-remove-btns {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .line-add {
-    margin-right: 7px;
-    width: 57px;
-    height: 52px;
-    background-image: linear-gradient(320deg, #38B64B, #42EB5C);
-    border-radius: 10px;
-    font-size: 50px;
-    border: none;
-    color: white;
-    padding-left: 6px;
-    box-shadow:
-        inset 0px 5px rgb(200, 230, 172),
-        0px 5px rgb(47, 100, 31);
-    cursor: pointer;
-    padding-top: 7px;
-    line-height: 1px;
+  margin-right: 7px;
+  width: 57px;
+  height: 52px;
+  background-image: linear-gradient(320deg, #38b64b, #42eb5c);
+  border-radius: 10px;
+  font-size: 50px;
+  border: none;
+  color: white;
+  padding-left: 6px;
+  box-shadow: inset 0px 5px rgb(200, 230, 172), 0px 5px rgb(47, 100, 31);
+  cursor: pointer;
+  padding-top: 7px;
+  line-height: 1px;
 }
 
 .line-remove {
-    width: 57px;
-    height: 52px;
-    background-image: linear-gradient(320deg, #CF1D37, #F05036);
-    border-radius: 10px;
-    font-size: 50px;
-    border: none;
-    color: white;
-    line-height: 1px;
-    padding-left: 9px;
-    padding-top: 9px;
-    box-shadow:
-        inset 0px 5px rgb(224, 185, 184),
-        0px 5px rgb(141, 32, 48);
-    cursor: pointer;
-
+  width: 57px;
+  height: 52px;
+  background-image: linear-gradient(320deg, #cf1d37, #f05036);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  line-height: 1px;
+  padding-top: 9px;
+  box-shadow: inset 0px 5px rgb(224, 185, 184), 0px 5px rgb(141, 32, 48);
+  cursor: pointer;
 }
 
 .arrow-up {
-    width: 57px;
-    height: 52px;
-    background-image: linear-gradient(320deg, #119ABD, #63C3DB);
-    border-radius: 10px;
-    font-size: 40px;
-    border: none;
-    color: white;
-    line-height: 1px;
-    padding-bottom: 7px;
-    box-shadow:
-        inset 0px 6px rgb(184, 213, 224),
-        0px 6px rgb(76, 131, 148);
-    cursor: pointer;
-
+  width: 57px;
+  height: 52px;
+  background-image: linear-gradient(320deg, #119abd, #63c3db);
+  border-radius: 10px;
+  font-size: 40px;
+  border: none;
+  color: white;
+  line-height: 1px;
+  box-shadow: inset 0px 6px rgb(184, 213, 224), 0px 6px rgb(76, 131, 148);
+  cursor: pointer;
 }
 
 .arrow-down {
-    margin-left: 7px;
-    width: 57px;
-    height: 52px;
-    background-image: linear-gradient(320deg, #119ABD, #63C3DB);
-    border-radius: 10px;
-    font-size: 40px;
-    border: none;
-    color: white;
-    line-height: 1px;
-    padding-bottom: 7px;
-    box-shadow:
-        inset 0px 6px rgb(184, 213, 224),
-        0px 6px rgb(76, 131, 148);
-    cursor: pointer;
-
+  margin-left: 7px;
+  width: 57px;
+  height: 52px;
+  background-image: linear-gradient(320deg, #119abd, #63c3db);
+  border-radius: 10px;
+  font-size: 40px;
+  border: none;
+  color: white;
+  line-height: 1px;
+  box-shadow: inset 0px 6px rgb(184, 213, 224), 0px 6px rgb(76, 131, 148);
+  cursor: pointer;
 }
 
 .size-align-font-color-switch {
-    background-color: #19A59F;
-    border-radius: 21px;
+  background-color: #19a59f;
+  border-radius: 21px;
 }
 
 .editor-props {
-    display: flex;
+  display: flex;
 }
 
 .bottom-row {
-    display: flex;
+  display: flex;
 }
 
 .top-row {
-    display: flex;
+  display: flex;
 }
 
 .btn-editor {
-    font-family: PoppinsSemiBold;
-    cursor: pointer;
-    color: #22252C;
-    width: 54.5px;
-    height: 50px;
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 5px rgb(59, 117, 121);
-    text-shadow: 1px 0 #22252C;
-    letter-spacing: 1px;
-    font-weight: bold;
+  font-family: PoppinsSemiBold;
+  cursor: pointer;
+  color: #22252c;
+  width: 54.5px;
+  height: 50px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px rgb(59, 117, 121);
+  text-shadow: 1px 0 #22252c;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .txt-size-btns {
-    display: flex;
+  display: flex;
 }
 
 .text-align {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .size-bigger {
-    padding-left: 10px;
-    font-size: 29px;
-    width: 54px;
+  padding-left: 10px;
+  font-size: 29px;
+  width: 54px;
 }
 
 .size-smaller {
-    padding-left: 13px;
-    letter-spacing: 5px;
-    font-size: 29px;
-    width: 55px;
+  padding-left: 13px;
+  letter-spacing: 5px;
+  font-size: 29px;
+  width: 55px;
 }
 
 .align-left {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .align-right {
-    padding-right: 8px;
+  padding-right: 8px;
 }
 
 .font-change {
-    height: 50px;
-    font-family: PoppinsSemiBold;
-    font-size: 25px;
-    padding-left: 32px;
-    cursor: pointer;
-    color: #22252C;
-    text-shadow: 1px 0 #22252C;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 5px rgb(59, 117, 121);
+  height: 50px;
+  font-family: PoppinsSemiBold;
+  font-size: 25px;
+  padding-left: 32px;
+  cursor: pointer;
+  color: #22252c;
+  text-shadow: 1px 0 #22252c;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 5px rgb(59, 117, 121);
 }
 
 .color-switch-btns {
-    display: flex;
+  display: flex;
 }
 
 .txt-color {
-    background-color: rgb(255, 255, 255, 0);
-    box-shadow: none;
-    position: absolute;
-    opacity: 0;
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .palette {
-    position: absolute;
-    width: 40.5px;
-    height: 50px;
-    box-shadow: none;
-    margin-left: 10px;
-    color: #22252C;
+  position: absolute;
+  width: 40.5px;
+  height: 50px;
+  box-shadow: none;
+  margin-left: 10px;
+  color: #22252c;
 }
 
 .btn-txt-color-helper {
-    position: absolute;
-    margin-right: 16px;
+  position: absolute;
+  margin-right: 16px;
 }
 
 .btn-switch-txt {
-    font-size: 33px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -12px;
+  font-size: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn-switch span {
-    height: 20px;
-    position: absolute;
-    padding-top: 3px;
+  height: 20px;
+  position: absolute;
+  padding-top: 3px;
 }
 
 .download-btn {
-    height: 50px;
-    background-color: #8F44BB;
-    border: none;
-    font-family: PoppinsMed;
-    font-size: 21px;
-    border-radius: 15px;
-    box-shadow:
-        inset 0px 6px #FFFFFF,
-        0px 6px rgb(97, 46, 131);
+  height: 50px;
+  background-color: #8f44bb;
+  border: none;
+  font-family: PoppinsMed;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: inset 0px 6px #ffffff, 0px 6px rgb(97, 46, 131);
 }
 
 .download-link {
-    color: white;
-    text-decoration: none;
-    width: 141px;
+  color: white;
+  text-decoration: none;
+  width: 141px;
 }
 
 .download-link span {
-    margin-right: 14px;
-    font-size: 30px;
-    padding-top: 10px;
+  margin-right: 14px;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+select {
+  appearance: menulist;
+}
+select {
+  -webkit-appearance: menulist;
 }
