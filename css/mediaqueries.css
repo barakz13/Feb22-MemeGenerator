@@ -488,8 +488,7 @@
     border-radius: 50%;
     background: none;
     cursor: pointer;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(103deg)
-      brightness(105%) contrast(105%);
+    color: white;
   }
 
   body.menu-open .btn-menu {
@@ -633,6 +632,7 @@
 
   .gallery {
     height: 602px;
+    margin-left: 30px;
   }
 
   img {
@@ -749,7 +749,7 @@
   }
 
   .line-remove {
-    padding-left: 4px;
+    padding-left: 5px;
     font-size: 35px;
   }
 
