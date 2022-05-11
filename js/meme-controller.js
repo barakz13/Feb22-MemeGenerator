@@ -78,7 +78,6 @@ function onChangeTxt(e) {
     return;
   }
   gMeme.lines[gMeme.selectedLineIdx].txt = text;
-  console.log(gMeme.lines);
   renderMeme();
   elTxt.value = '';
   elTxt.focus();
@@ -98,16 +97,11 @@ function onChangeTxtSize(size) {
 }
 
 function countNumOfLines() {
-  console.log(gMeme.lines);
-  console.log(gMeme.lines[0].txt);
-  console.log(gMeme.lines[1].txt);
-  console.log(gMeme.lines[2].txt);
   if (
     gMeme.lines[0].txt === '' &&
     gMeme.lines[1].txt === '' &&
     gMeme.lines[2].txt === ''
   ) {
-    console.log('if rishon');
     gNumOfLines = 1;
     return;
   }
@@ -116,26 +110,20 @@ function countNumOfLines() {
     (gMeme.lines[1].txt === '' && gMeme.lines[2].txt === '') ||
     (gMeme.lines[2].txt === '' && gMeme.lines[0].txt === '')
   ) {
-    console.log('if sheni');
     gNumOfLines = 2;
     return;
   }
-  console.log('shalosh');
   gNumOfLines = 3;
 }
 
 function onSwitchLine() {
   if (gNumOfLines === 1) {
-    console.log('gNumOfLines===1');
     gLastLine = gMeme.selectedLineIdx;
     return;
   }
   countNumOfLines();
   if (gNumOfLines === 2) {
-    console.log('gNumOfLines===2');
     if (!gAddedThirdLine) {
-      console.log('gAddedThirdLine === false');
-      console.log(gLastLine);
       if (gLastLine === 0) {
         gMeme.selectedLineIdx = 1;
         gLastLine = 1;
@@ -145,9 +133,7 @@ function onSwitchLine() {
       }
     }
   } else {
-    console.log('gNumOfLines===3');
     if (!gAddedThirdLine) {
-      console.log('hey');
       if (gMeme.selectedLineIdx === 0) gLastLine = 0;
       else gLastLine = 1;
       gMeme.selectedLineIdx = 2;
@@ -164,9 +150,6 @@ function onSwitchLine() {
       }
     }
   }
-  console.log('gMeme.selectedLineIdx', gMeme.selectedLineIdx);
-  //   console.log('gCurrMemeLines', gCurrMemeLines);
-  //   console.log('gLastLine', gLastLine);
 }
 
 function onRaiseText() {
@@ -221,28 +204,22 @@ function onAddLine() {
 function checkIfSingleLine() {
   if (gMeme.selectedLineIdx === 0) {
     if (gMeme.lines[1].txt === '' && gMeme.lines[2].txt === '') {
-      console.log(true);
       return true;
     } else {
-      console.log(false);
       return false;
     }
   }
   if (gMeme.selectedLineIdx === 1) {
     if (gMeme.lines[0].txt === '' && gMeme.lines[2].txt === '') {
-      console.log(true);
       return true;
     } else {
-      console.log(false);
       return false;
     }
   }
   if (gMeme.selectedLineIdx === 2) {
     if (gMeme.lines[0].txt === '' && gMeme.lines[1].txt === '') {
-      console.log(true);
       return true;
     } else {
-      console.log(false);
       return false;
     }
   }
@@ -267,9 +244,7 @@ function linesCountForRemove() {
 }
 
 function onRemoveLine() {
-  console.log(gMeme.selectedLineIdx);
   if (gMeme.selectedLineIdx === 0) {
-    console.log('im here0');
     gMeme.lines[0].txt = '';
     if (checkIfSingleLine()) {
       linesCountForRemove();
@@ -277,16 +252,13 @@ function onRemoveLine() {
     }
   }
   if (gMeme.selectedLineIdx === 1) {
-    console.log('im here1');
     gMeme.lines[1].txt = '';
     if (checkIfSingleLine()) {
-      console.log('im here1 inner');
       linesCountForRemove();
       onSwitchLine();
     }
   }
   if (gMeme.selectedLineIdx === 2) {
-    console.log('im here2');
     gMeme.lines[2].txt = '';
     if (checkIfSingleLine()) {
       linesCountForRemove();
