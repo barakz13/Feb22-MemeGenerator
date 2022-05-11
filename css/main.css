@@ -86,8 +86,14 @@ img {
     0px 5px rgb(235, 238, 243, 0.05);
 }
 
+.change-text {
+  align-items: center;
+  display: flex;
+}
+
 .meme-text-input {
-  width: 100%;
+  width: 90%;
+  margin-right: 3%;
   font-size: 25px;
   color: #3d3d3d;
   font-family: PoppinsMed;
@@ -97,6 +103,21 @@ img {
   border-radius: 50px;
   background-color: #ebeef3;
   box-shadow: inset 0px 5px rgb(255, 255, 255), 0px 5px rgb(184, 200, 206);
+}
+.meme-text-submit {
+  font-family: PoppinsSemiBold;
+  cursor: pointer;
+  color: #22252c;
+  width: 54.5px;
+  height: 50px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px rgb(59 117 121);
+  text-shadow: 1px 0 #22252c;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 10px;
 }
 
 .meme-text-input:focus {

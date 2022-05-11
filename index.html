@@ -1,105 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Meme-Generator</title>
-</head>
+  </head>
 
-<body onload="initGallery()">
+  <body onload="initGallery()">
     <div class="main-layout">
-        <header class="main-header">
-            <div class="logo">Meme-Generator</div>
-            <nav class="main-nav-container">
-                <div class="main-nav">
-                    <button class="nav-btn btn-gallery" onclick="initGallery()">Gallery</button>
-                    <button class="nav-btn btn-about">About</button>
-                </div>
-                <button class="btn-menu" onclick="toggleMenu()">☰</button>
-            </nav>
-        </header>
-        <span class="mq-value"></span>
-        <div class="main-container">
-            <div class="image-container">
-                <div class="gallery">
-
-                </div>
-            </div>
-            <div class="editor-container">
-                <div class="canvas-container">
-                    <canvas id="my-canvas" height="476" width="500"></canvas>
-                </div>
-                <div class="editor">
-                    <div class="change-text">
-                        <input type="text" id="text-change" class="meme-text-input">
-                    </div>
-                    <div class="add-remove-raise-lower">
-                        <div class="direction-btns">
-                            <button class="arrow-up" onclick="onRaiseText()">↑</button>
-                            <button class="arrow-down" onclick="onLowerText()">↓</button>
-                        </div>
-                        <div class="add-remove-btns">
-                            <button class="line-add" onclick="onAddLine()">+</button>
-                            <button class="line-remove" onclick="onRemoveLine()">🗑</button>
-                        </div>
-                    </div>
-                    <div class="size-align-font-color-switch">
-                        <div class="editor-props top-row">
-                            <div class="txt-size-btns">
-                                <button class="btn-editor size-bigger" value="up"
-                                    onclick="onChangeTxtSize(this.value)">A+</button>
-                                <button class="btn-editor size-smaller" value="down"
-                                    onclick="onChangeTxtSize(this.value)">A-</button>
-                            </div>
-                            <div class="text-align">
-                                <button value="left" class="fa fa-align-left fa-2x btn-editor align-left"
-                                    onclick="onTextAlign(this.value)"></button>
-                                <button value="center" class="fa fa-align-center fa-2x btn-editor"
-                                    onclick="onTextAlign(this.value)"></button>
-                                <button value="right" class="fa fa-align-right fa-2x btn-editor align-right"
-                                    onclick="onTextAlign(this.value)"></button>
-                            </div>
-                        </div>
-                        <div class="editor-props bottom-row">
-                            <select class="font-change" onchange="onSetFont(this.value)">
-                                <option value="Impact">IMPACT</option>
-                                <option value="Arial">ARIAL</option>
-                                <option value="Comic-sans">COMIC SANS</option>
-                            </select>
-                            <div class="color-switch-btns">
-                                <button class="btn-editor btn-switch" onclick="onSwitchLine()">
-                                    <div class="btn-switch-txt">
-                                        S<span class="btn-switch-underline">_</span>
-                                    </div>
-                                </button>
-                                <div class="btn-editor btn-txt-color">
-                                    <button class="btn-txt-color-helper btn-editor"></button>
-                                    <img src="svg/palette.svg" class="palette">
-                                    <input class="txt-color btn-editor" type="color" name="txt-color" value="#FFFFFF"
-                                        oninput="onChangeTxtColor()" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="download-btn"><a href="#" class="download-link"
-                            onclick="downloadMeme(this)"><span>⇩</span>Download</a>
-                    </button>
-                </div>
-            </div>
+      <header class="main-header">
+        <div class="logo">Meme-Generator</div>
+        <nav class="main-nav-container">
+          <div class="main-nav">
+            <button class="nav-btn btn-gallery" onclick="initGallery()">
+              Gallery
+            </button>
+            <button class="nav-btn btn-about">About</button>
+          </div>
+          <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </nav>
+      </header>
+      <span class="mq-value"></span>
+      <div class="main-container">
+        <div class="image-container">
+          <div class="gallery"></div>
         </div>
+        <div class="editor-container">
+          <div class="canvas-container">
+            <canvas id="my-canvas" height="476" width="500"></canvas>
+          </div>
+          <div class="editor">
+            <div class="change-text">
+              <input type="text" id="text-change" class="meme-text-input" />
+              <input
+                type="submit"
+                onclick="onChangeTxt()"
+                class="meme-text-submit"
+              />
+            </div>
+            <div class="add-remove-raise-lower">
+              <div class="direction-btns">
+                <button class="arrow-up" onclick="onRaiseText()">↑</button>
+                <button class="arrow-down" onclick="onLowerText()">↓</button>
+              </div>
+              <div class="add-remove-btns">
+                <button class="line-add" onclick="onAddLine()">+</button>
+                <button class="line-remove" onclick="onRemoveLine()">🗑</button>
+              </div>
+            </div>
+            <div class="size-align-font-color-switch">
+              <div class="editor-props top-row">
+                <div class="txt-size-btns">
+                  <button
+                    class="btn-editor size-bigger"
+                    value="up"
+                    onclick="onChangeTxtSize(this.value)"
+                  >
+                    A+
+                  </button>
+                  <button
+                    class="btn-editor size-smaller"
+                    value="down"
+                    onclick="onChangeTxtSize(this.value)"
+                  >
+                    A-
+                  </button>
+                </div>
+                <div class="text-align">
+                  <button
+                    value="left"
+                    class="fa fa-align-left fa-2x btn-editor align-left"
+                    onclick="onTextAlign(this.value)"
+                  ></button>
+                  <button
+                    value="center"
+                    class="fa fa-align-center fa-2x btn-editor"
+                    onclick="onTextAlign(this.value)"
+                  ></button>
+                  <button
+                    value="right"
+                    class="fa fa-align-right fa-2x btn-editor align-right"
+                    onclick="onTextAlign(this.value)"
+                  ></button>
+                </div>
+              </div>
+              <div class="editor-props bottom-row">
+                <select class="font-change" onchange="onSetFont(this.value)">
+                  <option value="Impact">IMPACT</option>
+                  <option value="Arial">ARIAL</option>
+                  <option value="Comic-sans">COMIC SANS</option>
+                </select>
+                <div class="color-switch-btns">
+                  <button
+                    class="btn-editor btn-switch"
+                    onclick="onSwitchLine()"
+                  >
+                    <div class="btn-switch-txt">
+                      S<span class="btn-switch-underline">_</span>
+                    </div>
+                  </button>
+                  <div class="btn-editor btn-txt-color">
+                    <button class="btn-txt-color-helper btn-editor"></button>
+                    <img src="svg/palette.svg" class="palette" />
+                    <input
+                      class="txt-color btn-editor"
+                      type="color"
+                      name="txt-color"
+                      value="#FFFFFF"
+                      oninput="onChangeTxtColor()"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="download-btn">
+              <a href="#" class="download-link" onclick="downloadMeme(this)"
+                ><span>⇩</span>Download</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-<script src="js/gallery-controller.js"></script>
-<script src="js/gallery-service.js"></script>
-<script src="js/meme-controller.js"></script>
-<script src="js/meme-service.js"></script>
-
+  </body>
+  <script src="js/gallery-controller.js"></script>
+  <script src="js/gallery-service.js"></script>
+  <script src="js/meme-controller.js"></script>
+  <script src="js/meme-service.js"></script>
 </html>
 
 <!-- <span class="btn-switch-letter">S</span> -->

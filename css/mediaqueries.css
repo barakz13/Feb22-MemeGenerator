@@ -119,8 +119,12 @@
     width: 444.5px;
   }
 
-  .meme-text-input {
+  .change-text {
     margin-top: 24px;
+  }
+
+  .btn-switch-txt {
+    margin-top: -12px;
   }
 
   .size-align-font-color-switch {
@@ -331,7 +335,7 @@
     order: 2;
   }
 
-  .meme-text-input {
+  .change-text {
     order: -1;
     margin-top: 24px;
   }
@@ -574,8 +578,12 @@
     width: 90%;
   }
 
-  .meme-text-input {
+  .change-text {
     margin-top: 13px;
+  }
+
+  .btn-switch-txt {
+    margin-top: -12px;
   }
 
   .size-align-font-color-switch {
@@ -609,6 +617,7 @@
 
   .btn-menu {
     margin-right: 16px;
+    padding-top: 8px;
     border-radius: 50%;
     height: 53px;
   }
@@ -660,7 +669,7 @@
     margin-top: 15px;
   }
 
-  .meme-text-input {
+  .change-text {
     margin-top: 0px;
   }
 
