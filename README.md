@@ -3,7 +3,8 @@
 Create your own meme.
 
 ## Description
-plenty of options to style and when finished you can download it. Pixel perfect and fully responsive.
+Plenty of options to style and when finished you can download it.
+Game Style pixel perfect design. Fully responsive.
 
 ## Software and Languages used
 
