@@ -8,7 +8,7 @@ Game Style pixel perfect design. Fully responsive.
 
 ## Software and Languages used
 
-Vanilla JS (MVC), CSS, HTML (including Canvas)
+Vanilla JS (MVC), CSS, HTML (including Canvas).
 
 Hope you'd like it!
 
