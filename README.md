@@ -12,5 +12,7 @@ Vanilla JS (MVC), CSS, HTML (including Canvas).
 
 Hope you'd like it!
 
+<a href="https://barakz13.github.io/meme-generator/" target="blank">Link to GitHub Pages</a>
+
 ![My Image](mgfull.png)
 ![My Image](mgmobile.jpeg)
