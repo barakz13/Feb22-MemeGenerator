@@ -4,7 +4,7 @@ Create your own meme.
 
 ## Description
 Plenty of options to style and when finished you can download it.
-Game Style pixel perfect design. Fully responsive.
+Game Style pixel perfect design. Fully responsive. Made use of grid.
 
 ## Software and Languages used
 
