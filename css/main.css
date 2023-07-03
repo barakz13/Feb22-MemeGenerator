@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+.main-screen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.6s;
+}
+
+body.menu-open .main-screen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 body {
   background: linear-gradient(150deg, #f64f8b, #f8825b);
   max-height: 1280px;
