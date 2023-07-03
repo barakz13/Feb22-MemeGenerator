@@ -18,6 +18,9 @@ function initEditor() {
   elEditor.style.display = 'flex';
   var elGallery = document.querySelector('.image-container');
   elGallery.style.display = 'none';
+  if (document.body.classList.contains('menu-open')) {
+    document.body.classList.toggle('menu-open');
+  }
   gMeme.selectedLineIdx = 0;
   gMeme.lines[gMeme.selectedLineIdx].txt = '';
   gTopTxtPos = 50;
